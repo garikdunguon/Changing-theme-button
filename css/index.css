@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*Main styles*/
+body {
+  height: 140vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+
+}
+.dark {
+
+  background: rgba(37, 34, 39, .9);
+}
+
+.header {
+  
+  width:85%;
+  height: 60px;
+  background: rgb(77, 129, 224);
+  border-radius: 0 0 8px 8px;
+
+  position: fixed;
+}
+.header .navbar {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .navbar img {
+  width: 20px;
+  user-select: none;
+  display: flex;
+
+
+}
+.header .navbar .navbar__button-change-theme {
+  position: relative;
+  border-radius: 13px;
+  cursor: pointer;
+  width: 50px;
+  height: 26px;
+  background: rgb(17, 17, 17);
+  display: flex;
+  justify-content: space-around;
+}
+.chkbx {
+  display: none;
+}
+.changebtn {
+  display: flex;
+  width: 22px;
+  position: absolute;
+  height: 22px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+  left: 2px;
+  top: 2px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+.chkbx:checked + .navbar__button-change-theme #changeBTN {
+  transform: translateX(25px);
+
+}
+@media (min-width: 767px ) {
+  .header .navbar .navbar__button-change-theme{
+    transform: scale(1.1);
+  }
+}
